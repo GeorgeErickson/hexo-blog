@@ -16,7 +16,11 @@
       <% } else { %>
         <%- item.content %>
       <% } %>
+
     </div>
+    <% if (item.author){ %>
+      <strong><%= item.author %></strong>
+    <% } %>
     <footer>
       <% if (index){ %>
         <% if (item.excerpt){ %>
@@ -37,6 +41,7 @@
       <div class="clearfix"></div>
     </footer>
   </div>
+
 </article>
 
 <%- partial('comment') %>
